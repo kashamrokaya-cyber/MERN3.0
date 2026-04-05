@@ -5,17 +5,18 @@ const app = express();// in an app has many methods like listen, get, post and e
 
 // always we can  request  (get) element of http  in browser not post, patch, update
 
-// always we send data in the form of JSON format ({...}); not string like res.send("mern")
+// always we send data in the form of JSON format ({...}); not string like res.send("mern");
+//ORM and ODM 
 
 app.get('/',(req,res)=>{
- res.json({
+ res.status(200).json({
     message:"Hello world.."
  })
     
 })
 
 app.get("/about",(req,res)=>{
-    res.json({
+    res.status(200).json({
         message:"hello i am from about api"
     })
 })
@@ -23,6 +24,10 @@ app.get("/source",(req,res)=>{
     res.json({
         message:"i ma source"
     })
+})
+
+app.get('/products',(req,res)=>{
+    res.send("i am products");
 })
 
 app.listen(3000,()=>{ //total port number limited 0-65535 adn 0-1000 not good for port because it can be used for ownself.
