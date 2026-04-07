@@ -31,3 +31,11 @@
  // there are two types 
  //cjs common js-> requre ,module.exports
  //ES  EcmaScript-> import ,export default
+
+
+
+
+ //blog-model->kebab case
+ //blog_mode ->snake case
+ //BlogModel ->pascal
+ //blogModel-> camel case

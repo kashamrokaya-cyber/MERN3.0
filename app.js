@@ -1,5 +1,7 @@
 const express = require('express'); 
 const connectToDatabase = require('./database'); //we dont use index.js after /database/ becoz not need when index term given
+ 
+require('dotenv').config();
 
 const app = express();
  connectToDatabase()
@@ -25,6 +27,6 @@ app.get('/products',(req,res)=>{
     res.send("i am products");
 })
 
-app.listen(3000,()=>{ //total port number limited 0-65535 adn 0-1000 not good for port because it can be used for ownself.
-    console.log("listening 3000");
+app.listen(process.env.PORT,()=>{ //total port number limited 0-65535 adn 0-1000 not good for port because it can be used for ownself.
+    console.log("listening ");
 });
